@@ -1,0 +1,9 @@
+-libhdlfiles ima_adpcm_lib  "../rtl/ima_adpcm/IMA_ADPCM_Encode.vhd \
+			     ../rtl/ima_adpcm/IMA_adpcm_steptable_rom.vhd \
+		  	     ../rtl/ima_adpcm/WAV_header_rom.vhd \
+			     ../rtl/ima_adpcm/IMA_ADPCM_top.vhd" 
+
+-lib ima_adpcm_lib ./ima_adpcm_lib
+
+
+

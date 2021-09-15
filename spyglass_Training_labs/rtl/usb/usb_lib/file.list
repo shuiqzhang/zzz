@@ -1,0 +1,15 @@
+../rtl/usb/usbf_crc16.v
+../rtl/usb/usbf_crc5.v
+../rtl/usb/usbf_ep_rf_dummy.v
+../rtl/usb/usbf_ep_rf.v
+../rtl/usb/usbf_idma.v
+../rtl/usb/usbf_mem_arb.v
+../rtl/usb/usbf_pa.v
+../rtl/usb/usbf_pd.v
+../rtl/usb/usbf_pe.v
+../rtl/usb/usbf_pl.v
+../rtl/usb/usbf_rf.v
+../rtl/usb/usbf_top.v
+../rtl/usb/usbf_utmi_if.v
+../rtl/usb/usbf_utmi_ls.v
+../rtl/usb/usbf_wb.v

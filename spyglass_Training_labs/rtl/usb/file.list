@@ -1,0 +1,3 @@
+../rtl/usb/usbf_top.v
+../rtl/usb/usbf_utmi_if.v
+../rtl/usb/usbf_utmi_ls.v

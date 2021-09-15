@@ -1,0 +1,43 @@
+#!SPYGLASS_PROJECT_FILE
+#!VERSION 3.0
+#  -------------------------------------------------------------------
+#  This is a software generated project file. Manual edits to this file could be lost during the next save operation
+#  Copyright Synopsys Inc.
+#  Last Updated By: SpyGlass 5.6.0
+#  Last Updated On Wed Jan 20 13:11:00 2016
+#
+#  -------------------------------------------------------------------
+
+##Data Import Section
+
+read_file -type verilog ../rtl/ahb2wb.v
+read_file -type verilog ../rtl/wb_subsystem.v
+read_file -type sourcelist ../rtl/usb/file.list
+read_file -type sourcelist ../rtl/wb_conmax/file.list
+read_file -type sourcelist ../rtl/ima_adpcm/file.list
+
+##Common Options Section
+
+set_option designread_enable_synthesis yes
+set_option y { ../rtl/usb/usb_lib }
+set_option libext { .v }
+set_option define { Fix_W415 }
+set_option pragma { synopsys pragma synthesis }
+set_option force_compile yes
+set_option define { Fix_UndrivenInTerm }
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_disable_flatten no
+set_option top wb_subsystem
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+current_goal lint/lint_rtl -top wb_subsystem
+read_file -type awl ./wb_subsystem/wb_subsystem/lint/lint_rtl/wb_subsystem_waiver_file.awl
+set_goal_option default_waiver_file ./wb_subsystem/wb_subsystem/lint/lint_rtl/wb_subsystem_waiver_file.awl
+
